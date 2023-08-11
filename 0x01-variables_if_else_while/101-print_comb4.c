@@ -1,39 +1,34 @@
 #include <stdio.h>
 /**
-  *main - entry point
-  *Return: 0 if succes
-  */
+ * main - entry point
+ *
+ * codes for printing all possible combination of two d/t digits
+ * in ascending order and separated by a comma followed by a space
+ *
+ * Return: 0 Success
+ */
 int main(void)
 {
-	/*delcalration */
-	int a = '0';
-	int b, c;
+	int digit1, digit2, digit3;
 
-	/* intialization */
-	while (a <= '7')
+	for (digit1 = 0; digit1 < 9; digit1++)
 	{
-		b = a + 1;
-		while (b <= '8')
+		for (digit2 = digit1 + 1; digit2 < 10; digit2++)
 		{
-			while (c <= '9')
+			for (digit3 = digit2 + 1; digit3 < 10; digit3++)
 			{
-				putchar((a & 10) + '0');
-				putchar((b & 10) + '0');
-				putchar((c % 10) + '0');
-				if (a == '7' && b == '8' && c == '9')
-				{
-					putchar('\n');
-				}
-				else
-				{
-					putchar(',');
-					putchar(' ');
-				}
-				c++;
+				putchar((digit1 % 10) + '0');
+				putchar((digit2 % 10) + '0');
+				putchar((digit3 % 10) + '0');
+
+				if (digit1 == 7 && digit2 == 8 && digit3 == 9)
+					continue;
+				putchar(',');
+				putchar(' ');
 			}
-			b++;
 		}
-		a++;
 	}
+	putchar('\n');
+
 	return (0);
 }
