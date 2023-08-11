@@ -1,1 +1,3 @@
-#0x00-hello_world
+## This is a project on low level programming with C programming langauage
+
+**:-)**
