@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
-  *_sqrt_check - checks the square root
+  *sqrt2 - checks the square root
   *@i: integer
   *@j: integer
   *
   *Return: square root
   */
 
-int _sqrt_check(int i, int j)
+int sqrt2(int i, int j)
 {
 	int s;
 
@@ -16,9 +16,9 @@ int _sqrt_check(int i, int j)
 		;
 	if (s > i)
 		return (-1);
-	 if (s == i)
+	if (s == i)
 		return (j);
-	return (_sqrt_check(i, j + 1));
+	return (sqrt2(i, j + 1));
 }
 
 /**
@@ -30,5 +30,5 @@ int _sqrt_check(int i, int j)
 
 int _sqrt_recursion(int n)
 {
-	return (_sqrt_check(n, 1));
+	return (sqrt2(n, 1));
 }
