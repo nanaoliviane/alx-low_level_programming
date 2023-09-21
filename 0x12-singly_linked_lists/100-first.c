@@ -2,7 +2,7 @@
 
 /**
   * printFirst - prints a string
-  *
+  *Return - Always 0
   */
 
 void printFirst(void)
